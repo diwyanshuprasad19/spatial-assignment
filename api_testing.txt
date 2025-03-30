@@ -1,0 +1,65 @@
+1.Create valid point:
+
+curl --location 'http://localhost:8000/api/points/' \
+--header 'Content-Type: application/json' \
+--header 'Request-ID: allow|me' \
+--data '{
+  "name": "Hospital",
+  "location": "POINT(77.5946 12.9716)"
+}
+'
+
+{"success":true,"message":"Created successfully.","data":{"id":1,"name":"Hospital","location":"SRID=4326;POINT (77.5946 12.9716)"}}
+
+2.Retrieve Point
+
+curl --location 'http://localhost:8000/api/points/1/' \
+--header 'Content-Type: application/json' \
+--header 'Request-ID: allow|me'
+
+{"success":true,"message":"Retrieved successfully.","data":{"id":1,"name":"Hospital","location":"SRID=4326;POINT (77.5946 12.9716)"}}
+
+3.Create LineString
+
+curl --location 'http://localhost:8000/api/lines/' \
+--header 'Content-Type: application/json' \
+--header 'Request-ID: allow|me' \
+--data '{
+  "name": "Main Road",
+  "path": "LINESTRING(77.5946 12.9716, 77.5950 12.9720)"
+}
+'
+
+{"success":true,"message":"Created successfully.","data":{"id":1,"name":"Main Road","path":"SRID=4326;LINESTRING (77.5946 12.9716, 77.595 12.972)"}}
+
+4.Retrieve LineString
+
+curl --location 'http://localhost:8000/api/lines/1/' \
+--header 'Content-Type: application/json' \
+--header 'Request-ID: allow|me'
+
+{"success":true,"message":"Retrieved successfully.","data":{"id":1,"name":"Main Road","path":"SRID=4326;LINESTRING (77.5946 12.9716, 77.595 12.972)"}}
+
+5.Create Polygon
+
+curl --location 'http://localhost:8000/api/polygons/' \
+--header 'Content-Type: application/json' \
+--header 'Request-ID: allow|me' \
+--data '{
+  "name": "City Zone A",
+  "area": "POLYGON((77.5946 12.9716, 77.5950 12.9720, 77.5960 12.9710, 77.5946 12.9716))"
+}
+'
+
+{"success":true,"message":"Created successfully.","data":{"id":1,"name":"City Zone A","area":"SRID=4326;POLYGON ((77.5946 12.9716, 77.595 12.972, 77.596 12.971, 77.5946 12.9716))"}}
+
+
+6.Retrieve Polygon
+
+curl --location 'http://localhost:8000/api/polygons/1/' \
+--header 'Content-Type: application/json' \
+--header 'Request-ID: allow|me'
+
+{"success":true,"message":"Retrieved successfully.","data":{"id":1,"name":"City Zone A","area":"SRID=4326;POLYGON ((77.5946 12.9716, 77.595 12.972, 77.596 12.971, 77.5946 12.9716))"}}
+
+

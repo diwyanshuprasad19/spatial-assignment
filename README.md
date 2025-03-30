@@ -40,15 +40,15 @@ This Django RESTful service provides APIs to manage spatial data objects includi
 ## Update Database Settings in settings.py
 
 -DATABASES = {
-    'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'spatial_db',
-        'USER': 'postgres',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
+-    'default': {
+-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+-        'NAME': 'spatial_db',
+-        'USER': 'postgres',
+-        'PASSWORD': 'password',
+-        'HOST': 'localhost',
+-        'PORT': '5432',
+-    }
+-}
 
 ## Apply Migrations & Run
 
